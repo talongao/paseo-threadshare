@@ -1,4 +1,11 @@
-import type { JsonValue } from "@getpaseo/protocol/agent-types";
+/** JSON-safe value; declared here so the plugin needs no protocol types. */
+export type JsonValue =
+  | string
+  | number
+  | boolean
+  | null
+  | JsonValue[]
+  | { [key: string]: JsonValue };
 
 export const HISTORY_FORMAT = "threadshare-history@v1";
 export const HISTORY_SCHEMA_VERSION = 1;

@@ -1,7 +1,6 @@
-import type { PaseoApi } from "@getpaseo/client";
 import type { MessagePage } from "../shared/contracts";
 import { entryId } from "./export";
-import { readTimeline } from "./timeline";
+import { readTimeline, type PaseoApi } from "./timeline";
 
 const MAX_PREVIEW_CHARS = 160;
 

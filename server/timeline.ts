@@ -1,12 +1,21 @@
-import type { PaseoApi } from "@getpaseo/client";
-import type { AgentTimelineItem } from "@getpaseo/protocol/agent-types";
+import type { PluginHandlerContext } from "@getpaseo/plugin/server";
+
+/*
+ * Types are derived from the host context instead of imported from
+ * `@getpaseo/client` or `@getpaseo/protocol`: those packages are not published
+ * for plugin consumers, so importing them breaks installation.
+ */
+export type PaseoApi = PluginHandlerContext["paseo"];
+export type TimelineItem = Awaited<
+  ReturnType<Awaited<ReturnType<PaseoApi["agents"]["ref"]>>["timeline"]["refetch"]>
+>["entries"][number]["item"];
 
 const PAGE_SIZE = 100;
 const MAX_PAGES = 200;
 
 export interface TimelineEntry {
   seq: number;
-  item: AgentTimelineItem;
+  item: TimelineItem;
   timestamp: string;
 }
 

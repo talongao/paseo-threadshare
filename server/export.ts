@@ -1,5 +1,4 @@
-import type { AgentTimelineItem } from "@getpaseo/protocol/agent-types";
-import type { TimelineEntry, TimelineSnapshot } from "./timeline";
+import type { TimelineEntry, TimelineItem, TimelineSnapshot } from "./timeline";
 import {
   HISTORY_FORMAT,
   HISTORY_SCHEMA_VERSION,
@@ -28,7 +27,7 @@ export function entryId(entry: TimelineEntry): string {
 
 function exportEntry(entry: TimelineEntry): SharedEntry | null {
   const base = { id: entryId(entry), createdAt: iso(entry.timestamp) };
-  const item: AgentTimelineItem = entry.item;
+  const item: TimelineItem = entry.item;
 
   switch (item.type) {
     case "user_message":
