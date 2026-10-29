@@ -1,0 +1,47 @@
+import { defineTranslations } from "@getpaseo/plugin/client";
+
+export const messages = defineTranslations({
+  resources: {
+    en: {
+      pillTitle: "Share this chat",
+      pillLabel: "Share",
+      settingsTitle: "Thread Share",
+      pickStart: "Pick the first message",
+      pickEnd: "Pick the last message",
+      back: "Back to the first message",
+      shareToEnd: "Share through the newest message",
+      loading: "Reading the conversation…",
+      empty: "This chat has no messages to share yet.",
+      truncated: "Only the newest messages are listed.",
+      sharing: "Sharing…",
+      shared: "Share link copied to clipboard",
+      settingsInfo: "Chats are published to {{service}}.",
+      settingsService: "Service address",
+      settingsServiceHint:
+        "Where shares are published. Leave it empty to use the hosted service.",
+      settingsServicePlaceholder: "Automatic",
+      settingsSave: "Save settings",
+      settingsSaving: "Saving…",
+    },
+    "zh-CN": {
+      pillTitle: "分享此对话",
+      pillLabel: "分享",
+      settingsTitle: "对话分享",
+      pickStart: "选择第一条消息",
+      pickEnd: "选择最后一条消息",
+      back: "返回选择第一条消息",
+      shareToEnd: "分享到最新消息",
+      loading: "正在读取对话…",
+      empty: "这个对话还没有可以分享的消息。",
+      truncated: "只列出了最新的消息。",
+      sharing: "正在分享…",
+      shared: "分享链接已复制到剪贴板",
+      settingsInfo: "对话将发布到 {{service}}。",
+      settingsService: "服务地址",
+      settingsServiceHint: "分享发布到的服务地址。留空使用官方托管服务。",
+      settingsServicePlaceholder: "自动",
+      settingsSave: "保存设置",
+      settingsSaving: "保存中…",
+    },
+  },
+});

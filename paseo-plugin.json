@@ -1,0 +1,20 @@
+{
+  "id": "threadshare",
+  "name": "Thread Share",
+  "description": "Share a range of the current agent conversation as a Threadshare link.",
+  "icon": "assets/icon.png",
+  "media": [
+    "assets/pill.png",
+    "assets/picker-start.png",
+    "assets/picker-end.png"
+  ],
+  "requirements": {
+    "paseo": ">=0.13.0"
+  },
+  "translations": {
+    "zh-CN": {
+      "name": "对话分享",
+      "description": "把当前 Agent 对话中的一段消息分享成 Threadshare 链接。"
+    }
+  }
+}
